@@ -1,0 +1,137 @@
+*{
+    margin: 0px;
+}
+
+body{
+    overflow-x: hidden;
+    background-color: black;
+}
+
+a{
+    text-decoration: none;
+}
+
+header{
+    margin: 0px;
+    padding: 15px;
+    border: 1px solid black;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: rgba(102, 80, 85, 0.75);
+    justify-content: space-around;
+    width: 98.2vw;
+    height: 20px;
+    top: 0px;
+}
+
+nav{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    color: #cdd5d1;
+}
+
+nav a{
+    margin: 3px;
+    padding: 3px;
+    color: #ddf8e8;
+}
+
+footer{
+    margin: 0px;
+    padding: 15px;
+    border: 1px solid black;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    position: fixed;
+    justify-content: space-around;
+    background-color: rgba(102, 80, 85, 0.75);
+    width: 98.2vw;
+    height: 20px;
+    bottom: 0;
+}
+
+section{
+    position: relative;
+    margin: 10px;
+    padding: 10px;
+    text-shadow: 4px 4px rgba(47, 24, 44, 0.83);
+    font-size: 100px;
+}
+
+article{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: #5a3d4d;
+}
+
+.planet{
+    position: fixed;
+    justify-content: space-around;
+    animation: planetmovement 45s linear infinite;
+}
+
+.blackhole{
+    position: fixed;
+    justify-content: space-around;
+    top: 35%;
+    left: 42%;
+    z-index: 1;
+    animation: blackholegrowth 45s linear infinite;
+}
+
+.asteriod{
+    position: fixed;
+    justify-content: space-around;
+    animation: asteroidmovement 45s linear infinite;
+}
+
+.spiralthingy{
+    position: fixed;
+    justify-content: space-around;
+    animation: spiralthingysmth 45s linear infinite;
+}
+
+@keyframes planetmovement{
+    0%{
+        transform:translate(-10px, -10px);
+    }
+    100%{
+        transform:translate(1930px, 1090px);
+    }
+}
+
+@keyframes blackholegrowth{
+    0%{
+        transform:scale(0);
+        opacity: 0%;
+    }
+    100%{
+        transform:scale(100);
+        opacity: 100%;
+    }
+}
+
+@keyframes asteroidmovement{
+    0%{
+        transform:translate(1930px, -10px);
+    }
+    100%{
+        transform:translate(-10px, 1090px);
+    }
+}
+
+@keyframes spiralthingysmth{
+    0%{
+        transform:translate(0px, 0px) rotate(0deg);
+    }
+    33%{
+        transform:translate(0px, 1080px);
+    }
+    66%{
+        transform:translate(1920px, 0px);
+    }
+    100%{
+        transform:translate(1920px, 1080px) rotate(360deg);
+    }
+}
